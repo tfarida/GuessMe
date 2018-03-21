@@ -21,7 +21,7 @@ public class DatabaseConnection {
 	private Connection connection;
 	private String url = "jdbc:mysql://localhost:3306/db_wap";
 	private String username = "root";
-	private String password = "titin";
+	private String password = "Peace2Temie!";
 
 	private DatabaseConnection() throws SQLException {
 		try {
