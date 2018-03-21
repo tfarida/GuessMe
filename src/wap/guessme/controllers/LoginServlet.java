@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 				}
 				
 				if(validate) {
-					
+					//request.login(gamer.getGamerName(), gamer.getPassword());
 					HttpSession session  = request.getSession();					
 					ds.insertGamerLog(gamer, session.getId());
 					

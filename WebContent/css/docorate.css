@@ -1,43 +1,25 @@
 body, html {
-	height: 100%;
+    height: 100%;
 }
+.bg { 
+    /* The image used */
+    background-image: url("../images/backGroundImg-1.jpg");
 
-.bg {
-	/* The image used */
-	/*background-image: url("backGroundImg-1.jpg");*/
-	/* Full height */
-	height: 100%;
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: x-repeat;
-	overflow: auto;
-	
-}
-.headerTop{
-	 position: fixed;
-    top: 0;
-    
-}
+    /* Full height */
+    height: 100%; 
 
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}          
 
 
 @-webkit-keyframes blinker {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
   }
-  
-  
   .blink{
-    position:fixed;
-   top:60px;
     font-size: 50px;
     font-family: cursive;
     color: rgba(255, 0, 64, 0.76);
@@ -50,153 +32,92 @@ body, html {
       -webkit-animation-timing-function:ease-in-out;
       -webkit-animation-direction: alternate;
   }
-  
-  .signup{
- color: yellow;
-  }
-  
-.loginform {
-	
-	top: 1;
-	float: right;
-	margin-right: 10px;
-	width: 300px;
-	
-	overflow: hidden;
-	box-sizing: border-box;
-	clear: both;
-}
-.record{
-	background-color:gray;
-	border-radius: 25px;
+
+
+
+
+
+  .loginform {border: 3px solid #f1f1f1;
+    position: fixed;
+    top: 1;
+    right: 0;
+    margin-right: 10px;
+    width: 300px;
+    border: 3px solid rgb(33, 105, 173);                  
 }
 
+
 input[type=text], input[type=password] {
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 button {
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
 }
 
 button:hover {
-	opacity: 0.8;
+    opacity: 0.8;
 }
 
 .registor {
-	width: auto;
-	padding: 10px 18px;
-	background-color: #72f436;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #72f436;
 }
 
 .imgcontainer {
-	text-align: center;
-	margin: 24px 0 12px 0;
+    text-align: center;
+    margin: 24px 0 12px 0;
 }
 
 img.avatar {
-	width: 40%;
-	border-radius: 50%;
+    width: 40%;
+    border-radius: 50%;
 }
 
 .container {
-	padding: 16px;
-	overflow: auto;
+    padding: 16px;
 }
 
 span.psw {
-	float: right;
-	padding-top: 16px;
+    float: right;
+    padding-top: 16px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-	span.psw {
-		display: block;
-		float: none;
-	}
-	.cancelbtn {
-		width: 100%;
-	}
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
 }
 
-.navTop {
-	background-color: rgb(157, 233, 122);
-	width: 400px;
-	float: right;
-	right: "0px";
+.navTop{
+    background-color: rgb(157, 233, 122);
+    width: 400px;
+    float:right;
+   
+    right:"0px";
+ 
 }
-
-.navElements {
-	padding: 5%;
-	font-size: 1.25em;
-}
-
-.congra {
-	/* The image used */
-	background-image: url("backGroundImg-1.jpg");
-	/* Full height */
-	height: 100%;
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: auto;
-	display = "none";
-}
-
-.hideCongra {
-	display: none;
-}
-
-.hideLoser{
-	display: none;
-}
-
-
-
-video.fullscreen { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translate(-50%, -50%);
-}
-
-
-#right_main ul#mainFeatures {
-    height:250px;
-    width:350px;
-    overflow:hidden;
-    margin-left:25px;
-}
-#mainFeatures li {
-    font-weight:bold;
-    font-size:22px;
-    font-family:"Myriad Pro", sans-serif;
-    padding:5px;
-}
-#mainFeatures li#wishlist {
-    list-style-image:url(2.png);
-    list-style-position:outside;
-}
-#mainFeatures li#sharing {
-    list-style-image:url(2.icon.ico);
-    list-style-position:outside;
-}
-#mainFeatures li#linking {
-    list-style-image:url(2.png);
-    list-style-position:outside;
+.navElements{
+  
+    padding: 5%;
+    font-size: 1.25em;
+    
 }
