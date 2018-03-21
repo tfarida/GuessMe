@@ -42,17 +42,17 @@ public class LoginServlet extends HttpServlet {
 				String password = request.getParameter("password");
 				//System.out.println("Email Or Gamer Name: "+emailOrGamerName);
 				//System.out.println("Password: "+password);				
-				//try {
+				try {
 					ds = new DatabaseService();
 					gamer = ds.getGamer(emailOrGamerName);
 					if(gamer != null) {
 						validate = gamer.getPassword().equals(password);					
 					}
 				
-				//} catch (SQLException e) {
+				} catch (SQLException e) {
 					// TODO Auto-generated catch block
-				//	e.printStackTrace();
-				//}
+					e.printStackTrace();
+				}
 				
 				if(validate) {
 					

@@ -39,15 +39,15 @@ public class DatabaseService {
 	private String QUERY;	
 	
 
-	public DatabaseService() {
-		try {
+	public DatabaseService() throws SQLException{
+		//try { //--> titin: we want to handlle it in ones who call this constructor, so we add throws SQLException, and so no need to put try catch here, although you can if you want :)
 			connection = DatabaseConnection.getInstance();
 			conn = connection.getConnection();
 			System.out.println("Connection successful.");
-		} catch (SQLException e) {
+		//} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//	e.printStackTrace();
+		//}
 	}
 	
 	
@@ -193,17 +193,6 @@ public class DatabaseService {
 	
 	//end tins
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	// retrieve opponent's details
 	public GamerLog getGamerLoginDetails(int loginId) {
 

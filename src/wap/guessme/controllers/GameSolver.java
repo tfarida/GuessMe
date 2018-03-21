@@ -50,7 +50,12 @@ public class GameSolver extends HttpServlet {
 	public GameSolver() {
 		// TODO Auto-generated constructor stub
 		gameService = new GameService();
-		dbService = new DatabaseService();
+		try {
+			dbService = new DatabaseService();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	/**

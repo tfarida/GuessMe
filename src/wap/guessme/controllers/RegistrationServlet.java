@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import wap.guessme.models.DatabaseService;
+import wap.guessme.utilities.AppHelper;
 
 /**
  * Servlet implementation class Registration
@@ -40,16 +41,17 @@ public class RegistrationServlet extends HttpServlet {
 		String fullName = request.getParameter("fullName");
 		String gender = request.getParameter("gender");
 		
-		//try {
-			ds = new DatabaseService();
+		try {
+			ds = new DatabaseService();			
 			ds.insertNewGamer(gamerName, emailAddress, password,fullName, gender);
 			request.setAttribute("successMessage", "Your registration is done successfully!");
 			
-		//} catch (SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			request.setAttribute("errorMessage", "Error!");
-			//e.printStackTrace();
-		//}			
+			e.printStackTrace();
+			request.setAttribute("errorMessage", AppHelper.internalServerErrorMessage);
+			
+		}			
 		
 		RequestDispatcher rd = request.getRequestDispatcher("register.jsp");
 		rd.forward(request, response);	
